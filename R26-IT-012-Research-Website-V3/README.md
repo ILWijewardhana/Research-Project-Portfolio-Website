@@ -16,7 +16,7 @@ This is an informational research website, not the clinical diagnostic applicati
 - Accessible motion, reduced-motion support, mobile layouts.
 
 ## To add files
-Copy the PDF to documents/ or presentations/ and add an entry to the `researchFiles` list and matching sidebar entry in index.html.
+Upload the PDF to OneDrive, create an embed link, and add its name and embed URL to the `researchFiles` list and matching sidebar entry in index.html.
 
 ## Privacy
 Some UI screenshots were blurred around user/case-identifying fields for public display. Avoid publishing patient-identifiable information.
