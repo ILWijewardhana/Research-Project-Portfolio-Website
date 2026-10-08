@@ -213,3 +213,47 @@ h1,h2,h3,h4{letter-spacing:-.025em}
 .contact-action .btn:hover{background:#8aeee6;box-shadow:0 12px 30px rgba(72,217,210,.32)}
 .contact-action .btn span{color:#0b5265}
 @media(max-width:680px){.contact-grid{gap:32px}.contact-emails a{grid-template-columns:67px minmax(0,1fr) 20px;padding:13px 12px}.contact-action{min-height:350px}.contact-orb{right:22px;top:14px;font-size:54px}}
+
+/* Match the contact headline scale to other section titles */
+.contact-grid h2{font-size:clamp(35px,4.2vw,57px)}
+
+
+/* Gentle pumping heart and a continuously travelling ECG trace */
+.heart-pulse{transform-box:fill-box;transform-origin:center;animation:heart-pump 1.35s ease-in-out infinite}
+.hero-medical-art .heart-ecg{stroke-dasharray:44 620;stroke-dashoffset:664;animation:ecg-travel 2.8s linear infinite}
+@keyframes heart-pump{0%,42%,100%{transform:scale(1)}8%{transform:scale(1.035)}17%{transform:scale(.995)}25%{transform:scale(1.022)}34%{transform:scale(1)}}
+@keyframes ecg-travel{to{stroke-dashoffset:0}}
+
+/* Keep the ECG fully visible while a bright trace travels across it */
+.hero-medical-art .heart-ecg{stroke-dasharray:none;stroke-dashoffset:0;opacity:.38;animation:none}
+.hero-medical-art .heart-ecg-flow{fill:none;stroke:#8af8ec;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;filter:url(#soft-glow);stroke-dasharray:70 594;stroke-dashoffset:664;animation:ecg-travel 2.8s linear infinite}
+
+/* Blue anatomical heart line art */
+#heart-line stop:first-child{stop-color:#54d9ff}
+#heart-line stop:nth-child(2){stop-color:#398dff}
+#heart-line stop:last-child{stop-color:#365bff}
+.hero-medical-art{opacity:.3;filter:drop-shadow(0 0 24px rgba(60,145,255,.3))}
+.hero-medical-art .heart-outline{stroke-width:2.8;opacity:.78}
+.hero-medical-art .heart-ecg{stroke:#4c91ff;opacity:.68;stroke-width:3}
+.hero-medical-art .heart-ecg-flow{stroke:#b9f5ff;stroke-width:5}
+
+.node-d{right:15%;bottom:25%;animation-delay:-1.2s}
+@media(max-width:950px){.node-d{display:none}}
+
+/* ECG trace stays outside the centered heart illustration */
+.hero-ecg-line{position:absolute;left:50%;top:50%;width:min(1440px,100vw);height:auto;transform:translate(-50%,-50%);overflow:visible;pointer-events:none;opacity:.72}
+.hero-ecg-line .ecg-base,.hero-ecg-line .ecg-flow{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.hero-ecg-line .ecg-base{stroke:#327bc0;stroke-width:3;opacity:.34}
+.hero-ecg-line .ecg-flow{stroke:#5acbff;stroke-width:4;filter:drop-shadow(0 0 5px rgba(73,180,255,.75));stroke-dasharray:36 900;stroke-dashoffset:936;animation:ecg-line-travel 3.2s linear infinite}
+.hero-medical-art{z-index:2;opacity:.34}
+.hero-content{position:relative;z-index:3}
+@keyframes ecg-line-travel{to{stroke-dashoffset:0}}
+@media(max-width:680px){.hero-ecg-line{top:79%;opacity:.45}.hero-medical-art{width:min(420px,100vw)}}
+
+/* Keep the anatomical heart compact and recognizable behind the hero copy */
+.hero-medical-art{width:min(560px,78vw);max-width:78vw;top:52%;opacity:.34}
+@media(max-width:680px){.hero-medical-art{width:min(420px,100vw);max-width:100vw}}
+
+/* Simplify the heart art and reduce its footprint */
+.hero-medical-art{width:min(440px,58vw);max-width:58vw;opacity:.27}
+@media(max-width:680px){.hero-medical-art{width:min(340px,88vw);max-width:88vw}}
