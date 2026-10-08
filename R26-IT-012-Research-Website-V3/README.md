@@ -5,6 +5,10 @@ Open `index.html` in a browser. For best PDF iframe behaviour, serve the folder 
 This is an informational research website, not the clinical diagnostic application. The separate application is linked externally.
 
 ## Updates
+- Advanced full-screen hero with animated medical background, ECG drawing, ambient lighting and project highlights.
+- Redesigned glass navigation and consistent Cardio Gastro AI branding.
+- Added `advanced.css` as a focused visual layer while preserving the original navy, cyan, blue and purple theme.
+- Improved hover feedback, active navigation, keyboard gallery controls and reduced-motion support.
 - Shorter research copy; more emphasis on finished application UI.
 - Six anonymized interface previews with interactive controls.
 - Inline PDF viewer and local PDF downloads for four reports and two slide decks.
