@@ -64,3 +64,12 @@ html{scroll-padding-top:68px}
 
 .nav-cta .cta-icon{display:inline-grid;place-items:center;margin-left:8px;color:#62e1dd}.nav-cta .cta-icon svg{display:block;width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 @media(max-width:680px){.header .nav-cta .cta-icon{display:none}}
+
+#milestones .milestone-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+#milestones .milestone-actions a{display:inline-flex;align-items:center;border:1px solid #cbdde7;border-radius:8px;padding:8px 11px;color:#17627a;text-decoration:none;font-size:13px;font-weight:700;transition:background .2s,border-color .2s}
+#milestones .milestone-actions a:hover{background:#dff0f5;border-color:#8bbdce}
+#milestones .milestone-proposals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:11px}
+#milestones .milestone-proposals a{display:flex;align-items:center;gap:8px;min-width:0;padding:8px 9px;border:1px solid #c8dfe9;border-radius:8px;background:#f5fafc;color:#24495b;font-size:12px;font-weight:700;line-height:1.2;white-space:nowrap;transition:background .2s,border-color .2s,transform .2s}
+#milestones .milestone-proposals a:hover{background:#fff;border-color:#8bbdce;transform:translateY(-1px)}
+#milestones .milestone-proposals a span{color:#19859a;font-size:10px;font-weight:800;letter-spacing:.04em}
+.person-email-icon{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:-3px;margin-left:4px}
