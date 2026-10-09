@@ -248,7 +248,7 @@ h1,h2,h3,h4{letter-spacing:-.025em}
 .hero-medical-art{z-index:2;opacity:.34}
 .hero-content{position:relative;z-index:3}
 @keyframes ecg-line-travel{to{stroke-dashoffset:0}}
-@media(max-width:680px){.hero-ecg-line{top:79%;opacity:.45}.hero-medical-art{width:min(420px,100vw)}}
+@media(max-width:680px){.hero-ecg-line{top:52%;opacity:.45}.hero-medical-art{width:min(420px,100vw)}}
 
 /* Keep the anatomical heart compact and recognizable behind the hero copy */
 .hero-medical-art{width:min(560px,78vw);max-width:78vw;top:52%;opacity:.34}
@@ -257,3 +257,4 @@ h1,h2,h3,h4{letter-spacing:-.025em}
 /* Simplify the heart art and reduce its footprint */
 .hero-medical-art{width:min(440px,58vw);max-width:58vw;opacity:.27}
 @media(max-width:680px){.hero-medical-art{width:min(340px,88vw);max-width:88vw}}
+
