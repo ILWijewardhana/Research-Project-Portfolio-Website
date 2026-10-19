@@ -153,12 +153,12 @@ const researchFiles = [
       "https://drive.google.com/file/d/1rtEwGq5RrLN0lDn4rtgZPJWlxsOXW0WJ/preview",
   },
   {
-    name: "Progress Presentation 1",
+    name: "Proposal Presentation",
     embedUrl:
       "https://drive.google.com/file/d/1CEZ9yT6I1YIeCdwHKgP-ndwJRXKBdfic/preview",
   },
   {
-    name: "Progress Presentation 2",
+    name: "Progress Presentation 1",
     embedUrl:
       "https://drive.google.com/file/d/101IN4JTNE6YYb3aQO6B-zs5bGMi4FF7Y/preview",
   },
@@ -183,9 +183,24 @@ const researchFiles = [
       "https://drive.google.com/file/d/1OXziMBakOFnMly1BR6-3cgrYyZR7CAmP/preview",
   },
   {
-    name: "R26-IT-012_Common_Report.pdf",
+    name: "Research Paper.pdf",
     embedUrl:
       "https://drive.google.com/file/d/16MqflBvEPIt_sfkmQU4laQbFIi3RXewd/preview",
+  },
+  {
+    name: "Progress Presentation 2",
+    embedUrl:
+      "https://drive.google.com/file/d/1qysr3iVAIOffFlYlCMqA_nFlnjp8YKDl/preview",
+  },
+  {
+    name: "Final Presentation",
+    embedUrl:
+      "https://drive.google.com/file/d/1diVfUzV-BghDEKyXAK727p33HjsDd7jc/preview",
+  },
+  {
+    name: "TAF Document.pdf",
+    embedUrl:
+      "https://drive.google.com/file/d/1uiIAbhUMKQdKdUGzmEQwe01b_HCSPwjz/preview",
   },
 ];
 document.querySelectorAll(".library-item[data-file]").forEach((b) =>
@@ -203,6 +218,16 @@ document.querySelectorAll(".library-item[data-file]").forEach((b) =>
     document.querySelectorAll(".library-item[data-file]").forEach((x) => {
       x.classList.toggle("current", x === b);
       x.setAttribute("aria-pressed", String(x === b));
+    });
+  }),
+);
+
+// Keep the research library compact: opening one document group closes the rest.
+document.querySelectorAll(".library-group").forEach((group) =>
+  group.addEventListener("toggle", () => {
+    if (!group.open) return;
+    document.querySelectorAll(".library-group").forEach((otherGroup) => {
+      if (otherGroup !== group) otherGroup.open = false;
     });
   }),
 );

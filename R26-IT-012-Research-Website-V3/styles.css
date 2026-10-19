@@ -1914,6 +1914,61 @@ html {
   color: #64768c;
   padding: 13px 22px;
 }
+.citation-note {
+  border-top: 1px solid #dbe5ef;
+  background: #f8fbff;
+}
+.citation-note strong {
+  color: #233f6b;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.citation-note p {
+  margin: 5px 0 0;
+}
+.library-citation {
+  padding: 4px 13px 14px;
+  color: #526a91;
+  font-size: 11px;
+  line-height: 1.55;
+}
+.library-citation strong {
+  color: #233f6b;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.library-citation p {
+  margin: 6px 0 0;
+}
+.citation-section {
+  background: #f5f8fc;
+}
+.project-citation {
+  max-width: 760px;
+  padding: 28px 32px;
+  border: 1px solid #d8e3f1;
+  border-left: 4px solid #3569d8;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(29, 60, 105, 0.08);
+  color: #162d51;
+}
+.citation-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #3863b6;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.project-citation p {
+  margin: 0;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.55;
+}
 .presentation-notice {
   background: #eaf2fc;
   border-radius: 14px;
