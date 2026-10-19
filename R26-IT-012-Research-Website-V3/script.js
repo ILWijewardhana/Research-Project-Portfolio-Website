@@ -185,7 +185,7 @@ const researchFiles = [
   {
     name: "Research Paper.pdf",
     embedUrl:
-      "https://drive.google.com/file/d/16MqflBvEPIt_sfkmQU4laQbFIi3RXewd/preview",
+      "https://drive.google.com/file/d/1ayHux_TtltUeWsDdhWcX84a3ZSnI0NwN/preview",
   },
   {
     name: "Progress Presentation 2",
