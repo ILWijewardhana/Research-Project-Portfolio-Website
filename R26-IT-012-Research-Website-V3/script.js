@@ -162,20 +162,47 @@ const researchFiles = [
     embedUrl:
       "https://drive.google.com/file/d/101IN4JTNE6YYb3aQO6B-zs5bGMi4FF7Y/preview",
   },
+  {
+    name: "IT22116024_DRAFT.pdf",
+    embedUrl:
+      "https://drive.google.com/file/d/178NqE_KHWSfd3V2lh0N-58ghz68cqVNl/preview",
+  },
+  {
+    name: "IT22193490_DRAFT.pdf",
+    embedUrl:
+      "https://drive.google.com/file/d/1RiB6ikBo57TCS8gikKKOydyUSVzL4igN/preview",
+  },
+  {
+    name: "IT22222640_DRAFT.pdf",
+    embedUrl:
+      "https://drive.google.com/file/d/1rVQQ5QoUt875YpqDWcGpSIg0KJZtx8jH/preview",
+  },
+  {
+    name: "IT22609380_DRAFT.pdf",
+    embedUrl:
+      "https://drive.google.com/file/d/1OXziMBakOFnMly1BR6-3cgrYyZR7CAmP/preview",
+  },
+  {
+    name: "R26-IT-012_Common_Report.pdf",
+    embedUrl:
+      "https://drive.google.com/file/d/16MqflBvEPIt_sfkmQU4laQbFIi3RXewd/preview",
+  },
 ];
-document.querySelectorAll(".library-item").forEach((b, i) =>
+document.querySelectorAll(".library-item[data-file]").forEach((b) =>
   b.addEventListener("click", () => {
-    const file = researchFiles[i];
-    document.getElementById("pdf-frame").src = file.embedUrl;
+    const file = researchFiles[Number(b.dataset.file)];
+    const previewUrl = new URL(file.embedUrl);
+    previewUrl.searchParams.set("hl", "en");
+    document.getElementById("pdf-frame").src = previewUrl.href;
     document.getElementById("pdf-frame").title = file.name;
     document.getElementById("pdf-name").textContent = file.name;
     document.getElementById("pdf-download").href = file.embedUrl
       .replace("/file/d/", "/uc?export=download&id=")
       .replace("/preview", "");
-    document.getElementById("pdf-newtab").href = file.embedUrl;
-    document.querySelectorAll(".library-item").forEach((x, j) => {
-      x.classList.toggle("current", j === i);
-      x.setAttribute("aria-pressed", String(j === i));
+    document.getElementById("pdf-newtab").href = previewUrl.href;
+    document.querySelectorAll(".library-item[data-file]").forEach((x) => {
+      x.classList.toggle("current", x === b);
+      x.setAttribute("aria-pressed", String(x === b));
     });
   }),
 );
